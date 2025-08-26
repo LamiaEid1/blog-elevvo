@@ -2,6 +2,14 @@
 import React, { useState } from 'react';
 import { Input } from '@heroui/input';
 import { Button } from '@heroui/button';
+import { Great_Vibes } from 'next/font/google';
+import clsx from 'clsx';
+
+const greatVibes = Great_Vibes({
+  subsets: ['latin'],
+  weight: ['400'],
+  display: 'swap',
+});
 
 export const Footer = () => {
   const [firstName, setFirstName] = useState('');
@@ -12,41 +20,32 @@ export const Footer = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Add your newsletter signup logic here
     try {
-      // Example API call
-      // await subscribeToNewsletter({ firstName, email });
       console.log('Newsletter signup:', { firstName, email });
-      
-      // Reset form on success
       setFirstName('');
       setEmail('');
-      
-      // You might want to show a success message here
     } catch (error) {
       console.error('Newsletter signup failed:', error);
-      // Handle error state
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <footer className="bg-gradient-to-br from-amber-100 via-stone-200 to-amber-200 py-16 px-4">
-      <div className="max-w-4xl mx-auto text-center">
+    <footer className="bg-footer py-2 px-4">
         {/* Main Heading */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-stone-700 mb-6">
+        <h2 className="text-4xl md:text-2xl lg:text-6xl font-light text-background-color mt-3 max-w-4xl mx-auto text-center">
           Meet your new{' '}
-          <span className="font-script italic text-stone-600">
+          <span className={clsx(greatVibes.className, 'text-background-color')}>
             Sunday Ritual
           </span>
         </h2>
         
         {/* Subtitle */}
-        <p className="text-stone-600 text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
-          Not your average newsletter - cozy up with Slow Brew Sunday every week for new intentions, 
-          productivity tips, and small shifts we can make together.
-        </p>
+       <p className=" whitespace-nowrap w-full p-4 text-center text-background-color">
+      Not your average newsletter - cozy up with Slow Brew Sunday every week for new intentions, productivity tips, and small shifts we can make together.
+        </p>  
+
         
         {/* Newsletter Signup Form */}
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto mb-6">
@@ -58,7 +57,7 @@ export const Footer = () => {
             className="flex-1"
             classNames={{
               input: "text-stone-700 placeholder:text-stone-400",
-              inputWrapper: "bg-white/70 backdrop-blur-sm border-stone-300 hover:border-stone-400 focus-within:border-stone-500"
+              inputWrapper: "bg-white/70 backdrop-blur-sm border-stone-300"
             }}
             size="lg"
             required
@@ -71,8 +70,7 @@ export const Footer = () => {
             onChange={(e) => setEmail(e.target.value)}
             className="flex-1"
             classNames={{
-              input: "text-stone-700 placeholder:text-stone-400",
-              inputWrapper: "bg-white/70 backdrop-blur-sm border-stone-300 hover:border-stone-400 focus-within:border-stone-500"
+             inputWrapper: "bg-white/70 backdrop-blur-sm border-white"
             }}
             size="lg"
             required
@@ -90,10 +88,9 @@ export const Footer = () => {
         </form>
         
         {/* Disclaimer */}
-        <p className="text-stone-500 text-sm">
+        <p className="text-stone-600 text-sm">
           *you'll also get added to our email list + can opt out any time
         </p>
-      </div>
     </footer>
   );
 };

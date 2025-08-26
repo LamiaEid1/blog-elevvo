@@ -13,6 +13,10 @@ const config = {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
       },
+      colors: {
+        'background-color': 'var(--background-color)',
+        'footer': 'var(--footer)',
+      }
     },
   },
   darkMode: "class",
