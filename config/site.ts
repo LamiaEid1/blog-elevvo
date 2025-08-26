@@ -67,3 +67,30 @@ export const siteConfig = {
     sponsor: "https://patreon.com/jrgarciadev",
   },
 };
+export const siteConfig1 = {
+  navItems: [
+    { label: "home", href: "/" },
+    { label: "about", href: "/about" },
+    { label: "templates", href: "/templates" },
+    { label: "videos", href: "/videos" },
+    { label: "shop", href: "/shop" },
+    { label: "blog", href: "/blog" },
+    { label: "resources", href: "/resources" },
+  ],
+  navMenuItems: [
+    { label: "home", href: "/" },
+    { label: "about", href: "/about" },
+    { label: "templates", href: "/templates" },
+    { label: "videos", href: "/videos" },
+    { label: "shop", href: "/shop" },
+    { label: "blog", href: "/blog" },
+    { label: "resources", href: "/resources" },
+  ],
+  links: {
+    instagram: "https://instagram.com",
+    facebook: "https://facebook.com", 
+    youtube: "https://youtube.com",
+    pinterest: "https://pinterest.com",
+    website: "https://google.com",
+  },
+};

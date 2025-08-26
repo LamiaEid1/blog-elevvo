@@ -42,7 +42,7 @@ export const Footer = () => {
         </h2>
         
         {/* Subtitle */}
-       <p className=" whitespace-nowrap w-full p-4 text-center text-background-color">
+       <p className="w-full p-4 text-center text-background-color">
       Not your average newsletter - cozy up with Slow Brew Sunday every week for new intentions, productivity tips, and small shifts we can make together.
         </p>  
 
