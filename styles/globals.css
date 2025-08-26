@@ -1,3 +1,11 @@
 @import "tailwindcss";
 
+:root {
+  --background-color: #f5f2ea; 
+  --footer: #a19c83;
+}
+
+body {
+  background-color: var(--background-color);
+}
 @config "../tailwind.config.js"
