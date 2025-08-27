@@ -89,7 +89,7 @@ export const Footer = () => {
         
         {/* Disclaimer */}
         <p className="text-stone-600 text-sm">
-          *you'll also get added to our email list + can opt out any time
+          Developed and designed by Lamia Eid © 2025
         </p>
     </footer>
   );

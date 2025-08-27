@@ -149,16 +149,6 @@ export default function Home() {
       date: "2024-08-08",
       href: "/blog/homemade-pasta-guide",
       category: "Food"
-    },
-    {
-      id: 7,
-      imageUrl: "/images/image7.jpg",
-      imageAlt: "Craft cocktails with garnishes",
-      title: "Craft Cocktails at Home: 5 Professional Techniques",
-      description: "Elevate your home bartending skills with these professional techniques. Learn proper muddling, shaking, and garnishing methods to create restaurant-quality drinks.",
-      date: "2024-08-05",
-      href: "/blog/craft-cocktails-home-techniques",
-      category: "Drinks"
     }
   ];
 
@@ -193,7 +183,7 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       {/* Filter/Search Bar */}
-      <div className="w-full max-w-7xl px-4 mb-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="w-full max-w-7xl px-4 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex gap-2 flex-wrap">
           {categories.map((cat) => (
             <button
@@ -214,7 +204,7 @@ export default function Home() {
             placeholder="Search by title..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="border border-gray-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300 w-full md:w-64"
+            className="border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 w-full md:w-64"
           />
           <label className="text-sm text-gray-700 font-medium flex items-center gap-2 whitespace-nowrap">
             Per page:
