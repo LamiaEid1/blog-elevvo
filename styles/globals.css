@@ -5,7 +5,20 @@
   --footer: #a19c83;
 }
 
-body {
+/* Apply background to both html and body */
+html {
   background-color: var(--background-color);
 }
+
+body {
+  background-color: var(--background-color);
+  min-height: 100vh; /* Ensure body takes at least full viewport height */
+}
+
+/* Optional: Ensure your main container also uses the background */
+#__next {
+  background-color: var(--background-color);
+  min-height: 100vh;
+}
+
 @config "../tailwind.config.js"
